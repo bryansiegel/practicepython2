@@ -7,25 +7,21 @@ import random
 
 chances = 0
 
-# Max 3 chances
 while chances < 3:
-    # TODO: check input to make sure it's an int
-    guess = input('Enter A Random Number ')
-    answer = random.randrange(1,10)
-    # answer = 3
+    try:
+        guess = int(input('Enter A Random Number '))
+        answer = random.randrange(1, 10)
+        if guess == answer:
+            print('Correct')
+            break
+        elif guess != answer:
+            print('Wrong')
+            chances += 1
+        if chances == 3:
+            print('Sorry You have guessed wrong please try again')
+    except ValueError:
+        print('You Must Enter A Number')
 
-# convert input guess variable into int
-    if int(guess) == answer:
-        print('Correct')
-        break
-    elif int(guess) != answer:
-        print('Wrong')
-        # print(type(guess))
-        # print(type(answer))
-        chances += 1
-# break out of the while loop once you hit 3 chances
-if chances == 3:
-    print('Sorry You have guessed wrong please try again')
 """
 Old Code
 """
