@@ -1,4 +1,8 @@
-# Number Game
+""" 
+Number Game
+you get 3 chances
+every time you guess wrong a new number is generated
+"""
 import random
 
 chances = 0
